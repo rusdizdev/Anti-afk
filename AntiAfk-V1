@@ -1,1 +1,485 @@
-local function a(b)return string.char(b)end local c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;c=Instance.new(a(83)..a(99)..a(114)..a(101)..a(101)..a(110)..a(71)..a(117)..a(105))c.Name=a(65)..a(100)..a(118)..a(97)..a(110)..a(99)..a(101)..a(100)..a(65)..a(110)..a(116)..a(105)..a(65)..a(70)..a(75)c.Parent=game:GetService(a(67)..a(111)..a(114)..a(101)..a(71)..a(117)..a(105))c.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;d=Instance.new(a(70)..a(114)..a(97)..a(109)..a(101))d.Parent=c;d.BackgroundColor3=Color3.fromRGB(30,30,40)d.BorderSizePixel=0;d.Position=UDim2.new(0.75,0,0.1,0)d.Size=UDim2.new(0,200,0,120)d.Active=true;d.Draggable=true;e=Instance.new(a(84)..a(101)..a(120)..a(116)..a(76)..a(97)..a(98)..a(101)..a(108))e.Parent=d;e.BackgroundColor3=Color3.fromRGB(0,90,120)e.Size=UDim2.new(1,0,0,25)e.Font=Enum.Font.GothamMedium;e.Text=a(65)..a(78)..a(84)..a(73)..a(45)..a(65)..a(70)..a(75)e.TextColor3=Color3.new(1,1,1)e.TextSize=14;e.TextXAlignment=Enum.TextXAlignment.Center;f=Instance.new(a(84)..a(101)..a(120)..a(116)..a(66)..a(117)..a(116)..a(116)..a(111)..a(110))f.Parent=e;f.BackgroundColor3=Color3.fromRGB(200,50,50)f.Position=UDim2.new(0.9,0,0.1,0)f.Size=UDim2.new(0,20,0,20)f.Font=Enum.Font.GothamBold;f.Text=a(215)f.TextColor3=Color3.new(1,1,1)f.TextSize=14;g=Instance.new(a(84)..a(101)..a(120)..a(116)..a(66)..a(117)..a(116)..a(116)..a(111)..a(110))g.Parent=d;g.BackgroundColor3=Color3.fromRGB(0,120,60)g.Position=UDim2.new(0.05,0,0.25,0)g.Size=UDim2.new(0.9,0,0,25)g.Font=Enum.Font.Gotham;g.Text=a(65)..a(67)..a(84)..a(73)..a(86)..a(65)..a(84)..a(69)g.TextColor3=Color3.new(1,1,1)g.TextSize=14;h=Instance.new(a(84)..a(101)..a(120)..a(116)..a(76)..a(97)..a(98)..a(101)..a(108))h.Parent=d;h.BackgroundTransparency=1;h.Position=UDim2.new(0.05,0,0.55,0)h.Size=UDim2.new(0.9,0,0,20)h.Font=Enum.Font.Gotham;h.Text=a(83)..a(116)..a(97)..a(116)..a(117)..a(115)..a(58)..a(32)..a(78)..a(111)..a(110)..a(45)..a(65)..a(99)..a(116)..a(105)..a(118)..a(101)h.TextColor3=Color3.fromRGB(255,100,100)h.TextSize=14;h.TextXAlignment=Enum.TextXAlignment.Left;i=Instance.new(a(84)..a(101)..a(120)..a(116)..a(76)..a(97)..a(98)..a(101)..a(108))i.Parent=d;i.BackgroundTransparency=1;i.Position=UDim2.new(0.05,0,0.75,0)i.Size=UDim2.new(0.9,0,0,20)i.Font=Enum.Font.Gotham;i.Text=a(48)..a(48)..a(58)..a(48)..a(48)..a(58)..a(48)..a(48)i.TextColor3=Color3.fromRGB(180,180,180)i.TextSize=14;i.TextXAlignment=Enum.TextXAlignment.Left;i.Visible=false;j=os.time()k=false;l,m=nil,nil;f.MouseButton1Click:Connect(function()if l then l:Disconnect()end;if m then m:Disconnect()end;c:Destroy()end)local function n()k=not k;if k then g.Text=a(68)..a(69)..a(65)..a(67)..a(84)..a(73)..a(86)..a(65)..a(84)..a(69)g.BackgroundColor3=Color3.fromRGB(180,40,40)h.Text=a(83)..a(116)..a(97)..a(116)..a(117)..a(115)..a(58)..a(32)..a(65)..a(99)..a(116)..a(105)..a(118)..a(101)h.TextColor3=Color3.fromRGB(100,255,100)i.Visible=true;i.TextColor3=Color3.fromRGB(200,255,200)j=os.time()l=game:GetService(a(82)..a(117)..a(110)..a(83)..a(101)..a(114)..a(118)..a(105)..a(99)..a(101)).Heartbeat:Connect(function()local o=os.time()-j;local p=math.floor(o/3600)local q=math.floor((o%3600)/60)local r=o%60;i.Text=string.format(a(37)..a(48)..a(50)..a(100)..a(58)..a(37)..a(48)..a(50)..a(100)..a(58)..a(37)..a(48)..a(50)..a(100),p,q,r)end)m=game:GetService(a(80)..a(108)..a(97)..a(121)..a(101)..a(114)..a(115)).LocalPlayer.Idled:Connect(function()game:GetService(a(86)..a(105)..a(114)..a(116)..a(117)..a(97)..a(108)..a(85)..a(115)..a(101)..a(114)):CaptureController()game:GetService(a(86)..a(105)..a(114)..a(116)..a(117)..a(97)..a(108)..a(85)..a(115)..a(101)..a(114)):ClickButton2(Vector2.new())h.Text=a(83)..a(116)..a(97)..a(116)..a(117)..a(115)..a(58)..a(32)..a(65)..a(70)..a(75)..a(32)..a(80)..a(114)..a(101)..a(118)..a(101)..a(110)..a(116)..a(101)..a(100)..a(33)wait(1)h.Text=a(83)..a(116)..a(97)..a(116)..a(117)..a(115)..a(58)..a(32)..a(65)..a(99)..a(116)..a(105)..a(118)..a(101)end)game:GetService(a(83)..a(116)..a(97)..a(114)..a(116)..a(101)..a(114)..a(71)..a(117)..a(105)):SetCore(a(83)..a(101)..a(110)..a(100)..a(78)..a(111)..a(116)..a(105)..a(102)..a(105)..a(99)..a(97)..a(116)..a(105)..a(111)..a(110),{Title=a(83)..a(89)..a(83)..a(84)..a(69)..a(77)..a(32)..a(65)..a(67)..a(84)..a(73)..a(86)..a(65)..a(84)..a(69)..a(68),Text=a(65)..a(110)..a(116)..a(105)..a(45)..a(65)..a(70)..a(75)..a(32)..a(112)..a(114)..a(111)..a(116)..a(101)..a(99)..a(116)..a(105)..a(111)..a(110)..a(32)..a(101)..a(110)..a(97)..a(98)..a(108)..a(101)..a(100),Duration=3})else g.Text=a(65)..a(67)..a(84)..a(73)..a(86)..a(65)..a(84)..a(69)g.BackgroundColor3=Color3.fromRGB(0,120,60)h.Text=a(83)..a(116)..a(97)..a(116)..a(117)..a(115)..a(58)..a(32)..a(78)..a(111)..a(110)..a(45)..a(65)..a(99)..a(116)..a(105)..a(118)..a(101)h.TextColor3=Color3.fromRGB(255,100,100)i.Visible=false;if l then l:Disconnect()end;if m then m:Disconnect()end;game:GetService(a(83)..a(116)..a(97)..a(114)..a(116)..a(101)..a(114)..a(71)..a(117)..a(105)):SetCore(a(83)..a(101)..a(110)..a(100)..a(78)..a(111)..a(116)..a(105)..a(102)..a(105)..a(99)..a(97)..a(116)..a(105)..a(111)..a(110),{Title=a(83)..a(89)..a(83)..a(84)..a(69)..a(77)..a(32)..a(68)..a(69)..a(65)..a(67)..a(84)..a(73)..a(86)..a(65)..a(84)..a(69)..a(68),Text=a(65)..a(110)..a(116)..a(105)..a(45)..a(65)..a(70)..a(75)..a(32)..a(112)..a(114)..a(111)..a(116)..a(101)..a(99)..a(116)..a(105)..a(111)..a(110)..a(32)..a(100)..a(105)..a(115)..a(97)..a(98)..a(108)..a(101)..a(100),Duration=3})end end;g.MouseButton1Click:Connect(n)game:GetService(a(83)..a(116)..a(97)..a(114)..a(116)..a(101)..a(114)..a(71)..a(117)..a(105)):SetCore(a(83)..a(101)..a(110)..a(100)..a(78)..a(111)..a(116)..a(105)..a(102)..a(105)..a(99)..a(97)..a(116)..a(105)..a(111)..a(110),{Title=a(65)..a(68)..a(86)..a(65)..a(78)..a(67)..a(69)..a(68)..a(32)..a(65)..a(78)..a(84)..a(73)..a(45)..a(65)..a(70)..a(75),Text=a(82)..a(101)..a(97)..a(100)..a(121)..a(32)..a(116)..a(111)..a(32)..a(98)..a(101)..a(32)..a(97)..a(99)..a(116)..a(105)..a(118)..a(97)..a(116)..a(101)..a(100),Duration=5,Icon=a(114)..a(98)..a(120)..a(97)..a(115)..a(115)..a(101)..a(116)..a(105)..a(100)..a(58)..a(47)..a(47)..a(52)..a(52)..a(53)..a(56)..a(57)..a(48)..a(49)..a(56)..a(56)..a(54)})
+local gui = Instance.new("ScreenGui")
+local mainFrame = Instance.new("Frame")
+local titleBar = Instance.new("TextLabel")
+local closeButton = Instance.new("TextButton")
+local toggleButton = Instance.new("TextButton")
+local statusLabel = Instance.new("TextLabel")
+local timerLabel = Instance.new("TextLabel")
+
+-- GUI Setup
+gui.Name = "AdvancedAntiAFK"
+gui.Parent = game.CoreGui
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+-- Main Frame (Compact Size)
+mainFrame.Parent = gui
+mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 40)
+mainFrame.BorderSizePixel = 0
+mainFrame.Position = UDim2.new(0.75, 0, 0.1, 0)
+mainFrame.Size = UDim2.new(0, 200, 0, 120)  -- Sedikit lebih tinggi untuk toggle
+mainFrame.Active = true
+mainFrame.Draggable = true
+
+-- Title Bar (Centered Text)
+titleBar.Parent = mainFrame
+titleBar.BackgroundColor3 = Color3.fromRGB(0, 90, 120)
+titleBar.Size = UDim2.new(1, 0, 0, 25)
+titleBar.Font = Enum.Font.GothamMedium
+titleBar.Text = "ANTI-AFK"
+titleBar.TextColor3 = Color3.new(1, 1, 1)
+titleBar.TextSize = 14
+titleBar.TextXAlignment = Enum.TextXAlignment.Center
+
+-- Close Button
+closeButton.Parent = titleBar
+closeButton.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+closeButton.Position = UDim2.new(0.9, 0, 0.1, 0)
+closeButton.Size = UDim2.new(0, 20, 0, 20)
+closeButton.Font = Enum.Font.GothamBold
+closeButton.Text = "×"
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.TextSize = 14
+
+-- Toggle Button
+toggleButton.Parent = mainFrame
+toggleButton.BackgroundColor3 = Color3.fromRGB(0, 120, 60)
+toggleButton.Position = UDim2.new(0.05, 0, 0.25, 0)
+toggleButton.Size = UDim2.new(0.9, 0, 0, 25)
+toggleButton.Font = Enum.Font.Gotham
+toggleButton.Text = "ACTIVATE"
+toggleButton.TextColor3 = Color3.new(1, 1, 1)
+toggleButton.TextSize = 14
+
+-- Status Label
+statusLabel.Parent = mainFrame
+statusLabel.BackgroundTransparency = 1
+statusLabel.Position = UDim2.new(0.05, 0, 0.55, 0)
+statusLabel.Size = UDim2.new(0.9, 0, 0, 20)
+statusLabel.Font = Enum.Font.Gotham
+statusLabel.Text = "Status: Non-Active"
+statusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
+statusLabel.TextSize = 14
+statusLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Timer Label
+timerLabel.Parent = mainFrame
+timerLabel.BackgroundTransparency = 1
+timerLabel.Position = UDim2.new(0.05, 0, 0.75, 0)
+timerLabel.Size = UDim2.new(0.9, 0, 0, 20)
+timerLabel.Font = Enum.Font.Gotham
+timerLabel.Text = "00:00:00"
+timerLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
+timerLabel.TextSize = 14
+timerLabel.TextXAlignment = Enum.TextXAlignment.Left
+timerLabel.Visible = false  -- Awalnya tidak terlihat
+
+-- System Variables
+local startTime = os.time()
+local isActive = false
+local timerConnection = nil
+local antiAfkConnection = nil
+
+-- Close Functionality
+closeButton.MouseButton1Click:Connect(function()
+    if timerConnection then timerConnection:Disconnect() end
+    if antiAfkConnection then antiAfkConnection:Disconnect() end
+    gui:Destroy()
+end)
+
+-- Toggle System Function
+local function toggleSystem()
+    isActive = not isActive
+    
+    if isActive then
+        -- Activate system
+        toggleButton.Text = "DEACTIVATE"
+        toggleButton.BackgroundColor3 = Color3.fromRGB(180, 40, 40)
+        statusLabel.Text = "Status: Active"
+        statusLabel.TextColor3 = Color3.fromRGB(100, 255, 100)
+        timerLabel.Visible = true
+        timerLabel.TextColor3 = Color3.fromRGB(200, 255, 200)
+        
+        -- Start timer
+        startTime = os.time()
+        timerConnection = game:GetService("RunService").Heartbeat:Connect(function()
+            local elapsed = os.time() - startTime
+            local hours = math.floor(elapsed / 3600)
+            local minutes = math.floor((elapsed % 3600) / 60)
+            local seconds = elapsed % 60
+            timerLabel.Text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
+        end)
+        
+        -- Start anti-AFK
+        antiAfkConnection = game:GetService("Players").LocalPlayer.Idled:Connect(function()
+            game:GetService("VirtualUser"):CaptureController()
+            game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+            statusLabel.Text = "Status: AFK Prevented!"
+            wait(1)
+            statusLabel.Text = "Status: Active"
+        end)
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "SYSTEM ACTIVATED",
+            Text = "Anti-AFK protection enabled",
+            Duration = 3
+        })
+    else
+        -- Deactivate system
+        toggleButton.Text = "ACTIVATE"
+local gui = Instance.new("ScreenGui")
+local mainFrame = Instance.new("Frame")
+local titleBar = Instance.new("TextLabel")
+local closeButton = Instance.new("TextButton")
+local toggleButton = Instance.new("TextButton")
+local statusLabel = Instance.new("TextLabel")
+local timerLabel = Instance.new("TextLabel")
+
+-- GUI Setup
+gui.Name = "AdvancedAntiAFK"
+gui.Parent = game.CoreGui
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+-- Main Frame (Compact Size)
+mainFrame.Parent = gui
+mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 40)
+mainFrame.BorderSizePixel = 0
+mainFrame.Position = UDim2.new(0.75, 0, 0.1, 0)
+mainFrame.Size = UDim2.new(0, 200, 0, 120)  -- Sedikit lebih tinggi untuk toggle
+mainFrame.Active = true
+mainFrame.Draggable = true
+
+-- Title Bar (Centered Text)
+titleBar.Parent = mainFrame
+titleBar.BackgroundColor3 = Color3.fromRGB(0, 90, 120)
+titleBar.Size = UDim2.new(1, 0, 0, 25)
+titleBar.Font = Enum.Font.GothamMedium
+titleBar.Text = "ANTI-AFK"
+titleBar.TextColor3 = Color3.new(1, 1, 1)
+titleBar.TextSize = 14
+titleBar.TextXAlignment = Enum.TextXAlignment.Center
+
+-- Close Button
+closeButton.Parent = titleBar
+closeButton.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+closeButton.Position = UDim2.new(0.9, 0, 0.1, 0)
+closeButton.Size = UDim2.new(0, 20, 0, 20)
+closeButton.Font = Enum.Font.GothamBold
+closeButton.Text = "×"
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.TextSize = 14
+
+-- Toggle Button
+toggleButton.Parent = mainFrame
+toggleButton.BackgroundColor3 = Color3.fromRGB(0, 120, 60)
+toggleButton.Position = UDim2.new(0.05, 0, 0.25, 0)
+toggleButton.Size = UDim2.new(0.9, 0, 0, 25)
+toggleButton.Font = Enum.Font.Gotham
+toggleButton.Text = "ACTIVATE"
+toggleButton.TextColor3 = Color3.new(1, 1, 1)
+toggleButton.TextSize = 14
+
+-- Status Label
+statusLabel.Parent = mainFrame
+statusLabel.BackgroundTransparency = 1
+statusLabel.Position = UDim2.new(0.05, 0, 0.55, 0)
+statusLabel.Size = UDim2.new(0.9, 0, 0, 20)
+statusLabel.Font = Enum.Font.Gotham
+statusLabel.Text = "Status: Non-Active"
+statusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
+statusLabel.TextSize = 14
+statusLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Timer Label
+timerLabel.Parent = mainFrame
+timerLabel.BackgroundTransparency = 1
+timerLabel.Position = UDim2.new(0.05, 0, 0.75, 0)
+timerLabel.Size = UDim2.new(0.9, 0, 0, 20)
+timerLabel.Font = Enum.Font.Gotham
+timerLabel.Text = "00:00:00"
+timerLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
+timerLabel.TextSize = 14
+timerLabel.TextXAlignment = Enum.TextXAlignment.Left
+timerLabel.Visible = false  -- Awalnya tidak terlihat
+
+-- System Variables
+local startTime = os.time()
+local isActive = false
+local timerConnection = nil
+local antiAfkConnection = nil
+
+-- Close Functionality
+closeButton.MouseButton1Click:Connect(function()
+    if timerConnection then timerConnection:Disconnect() end
+    if antiAfkConnection then antiAfkConnection:Disconnect() end
+    gui:Destroy()
+end)
+
+-- Toggle System Function
+local function toggleSystem()
+    isActive = not isActive
+    
+    if isActive then
+        -- Activate system
+        toggleButton.Text = "DEACTIVATE"
+        toggleButton.BackgroundColor3 = Color3.fromRGB(180, 40, 40)
+        statusLabel.Text = "Status: Active"
+        statusLabel.TextColor3 = Color3.fromRGB(100, 255, 100)
+        timerLabel.Visible = true
+        timerLabel.TextColor3 = Color3.fromRGB(200, 255, 200)
+        
+        -- Start timer
+local gui = Instance.new("ScreenGui")
+local mainFrame = Instance.new("Frame")
+local titleBar = Instance.new("TextLabel")
+local closeButton = Instance.new("TextButton")
+local toggleButton = Instance.new("TextButton")
+local statusLabel = Instance.new("TextLabel")
+local timerLabel = Instance.new("TextLabel")
+
+-- GUI Setup
+gui.Name = "AdvancedAntiAFK"
+gui.Parent = game.CoreGui
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+-- Main Frame (Compact Size)
+mainFrame.Parent = gui
+mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 40)
+mainFrame.BorderSizePixel = 0
+mainFrame.Position = UDim2.new(0.75, 0, 0.1, 0)
+mainFrame.Size = UDim2.new(0, 200, 0, 120)  -- Sedikit lebih tinggi untuk toggle
+mainFrame.Active = true
+mainFrame.Draggable = true
+
+-- Title Bar (Centered Text)
+titleBar.Parent = mainFrame
+titleBar.BackgroundColor3 = Color3.fromRGB(0, 90, 120)
+titleBar.Size = UDim2.new(1, 0, 0, 25)
+titleBar.Font = Enum.Font.GothamMedium
+titleBar.Text = "ANTI-AFK"
+titleBar.TextColor3 = Color3.new(1, 1, 1)
+titleBar.TextSize = 14
+titleBar.TextXAlignment = Enum.TextXAlignment.Center
+
+-- Close Button
+closeButton.Parent = titleBar
+closeButton.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+closeButton.Position = UDim2.new(0.9, 0, 0.1, 0)
+closeButton.Size = UDim2.new(0, 20, 0, 20)
+closeButton.Font = Enum.Font.GothamBold
+closeButton.Text = "×"
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.TextSize = 14
+
+-- Toggle Button
+toggleButton.Parent = mainFrame
+toggleButton.BackgroundColor3 = Color3.fromRGB(0, 120, 60)
+toggleButton.Position = UDim2.new(0.05, 0, 0.25, 0)
+toggleButton.Size = UDim2.new(0.9, 0, 0, 25)
+toggleButton.Font = Enum.Font.Gotham
+toggleButton.Text = "ACTIVATE"
+toggleButton.TextColor3 = Color3.new(1, 1, 1)
+toggleButton.TextSize = 14
+
+-- Status Label
+statusLabel.Parent = mainFrame
+statusLabel.BackgroundTransparency = 1
+statusLabel.Position = UDim2.new(0.05, 0, 0.55, 0)
+statusLabel.Size = UDim2.new(0.9, 0, 0, 20)
+statusLabel.Font = Enum.Font.Gotham
+statusLabel.Text = "Status: Non-Active"
+statusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
+statusLabel.TextSize = 14
+statusLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Timer Label
+timerLabel.Parent = mainFrame
+timerLabel.BackgroundTransparency = 1
+timerLabel.Position = UDim2.new(0.05, 0, 0.75, 0)
+timerLabel.Size = UDim2.new(0.9, 0, 0, 20)
+timerLabel.Font = Enum.Font.Gotham
+timerLabel.Text = "00:00:00"
+timerLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
+timerLabel.TextSize = 14
+timerLabel.TextXAlignment = Enum.TextXAlignment.Left
+timerLabel.Visible = false  -- Awalnya tidak terlihat
+
+-- System Variables
+local startTime = os.time()
+local isActive = false
+local timerConnection = nil
+local antiAfkConnection = nil
+
+-- Close Functionality
+closeButton.MouseButton1Click:Connect(function()
+    if timerConnection then timerConnection:Disconnect() end
+    if antiAfkConnection then antiAfkConnection:Disconnect() end
+    gui:Destroy()
+end)
+
+-- Toggle System Function
+local function toggleSystem()
+    isActive = not isActive
+    
+    if isActive then
+        -- Activate system
+        toggleButton.Text = "DEACTIVATE"
+        toggleButton.BackgroundColor3 = Color3.fromRGB(180, 40, 40)
+        statusLabel.Text = "Status: Active"
+        statusLabel.TextColor3 = Color3.fromRGB(100, 255, 100)
+        timerLabel.Visible = true
+        timerLabel.TextColor3 = Color3.fromRGB(200, 255, 200)
+        
+        -- Start timer
+local gui = Instance.new("ScreenGui")
+local mainFrame = Instance.new("Frame")
+local titleBar = Instance.new("TextLabel")
+local closeButton = Instance.new("TextButton")
+local toggleButton = Instance.new("TextButton")
+local statusLabel = Instance.new("TextLabel")
+local timerLabel = Instance.new("TextLabel")
+
+-- GUI Setup
+gui.Name = "AdvancedAntiAFK"
+gui.Parent = game.CoreGui
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+-- Main Frame (Compact Size)
+mainFrame.Parent = gui
+mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 40)
+mainFrame.BorderSizePixel = 0
+mainFrame.Position = UDim2.new(0.75, 0, 0.1, 0)
+mainFrame.Size = UDim2.new(0, 200, 0, 120)  -- Sedikit lebih tinggi untuk toggle
+mainFrame.Active = true
+mainFrame.Draggable = true
+
+-- Title Bar (Centered Text)
+titleBar.Parent = mainFrame
+titleBar.BackgroundColor3 = Color3.fromRGB(0, 90, 120)
+titleBar.Size = UDim2.new(1, 0, 0, 25)
+titleBar.Font = Enum.Font.GothamMedium
+titleBar.Text = "ANTI-AFK"
+titleBar.TextColor3 = Color3.new(1, 1, 1)
+titleBar.TextSize = 14
+titleBar.TextXAlignment = Enum.TextXAlignment.Center
+
+-- Close Button
+closeButton.Parent = titleBar
+closeButton.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+closeButton.Position = UDim2.new(0.9, 0, 0.1, 0)
+closeButton.Size = UDim2.new(0, 20, 0, 20)
+closeButton.Font = Enum.Font.GothamBold
+closeButton.Text = "×"
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.TextSize = 14
+
+-- Toggle Button
+toggleButton.Parent = mainFrame
+toggleButton.BackgroundColor3 = Color3.fromRGB(0, 120, 60)
+toggleButton.Position = UDim2.new(0.05, 0, 0.25, 0)
+toggleButton.Size = UDim2.new(0.9, 0, 0, 25)
+toggleButton.Font = Enum.Font.Gotham
+toggleButton.Text = "ACTIVATE"
+toggleButton.TextColor3 = Color3.new(1, 1, 1)
+toggleButton.TextSize = 14
+
+-- Status Label
+statusLabel.Parent = mainFrame
+statusLabel.BackgroundTransparency = 1
+statusLabel.Position = UDim2.new(0.05, 0, 0.55, 0)
+statusLabel.Size = UDim2.new(0.9, 0, 0, 20)
+statusLabel.Font = Enum.Font.Gotham
+statusLabel.Text = "Status: Non-Active"
+statusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
+statusLabel.TextSize = 14
+statusLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Timer Label
+timerLabel.Parent = mainFrame
+timerLabel.BackgroundTransparency = 1
+timerLabel.Position = UDim2.new(0.05, 0, 0.75, 0)
+timerLabel.Size = UDim2.new(0.9, 0, 0, 20)
+timerLabel.Font = Enum.Font.Gotham
+timerLabel.Text = "00:00:00"
+timerLabel.TextColor3 = Color3.fromRGB(180, 180, 180)
+timerLabel.TextSize = 14
+timerLabel.TextXAlignment = Enum.TextXAlignment.Left
+timerLabel.Visible = false  -- Awalnya tidak terlihat
+
+-- System Variables
+local startTime = os.time()
+local isActive = false
+local timerConnection = nil
+local antiAfkConnection = nil
+
+-- Close Functionality
+closeButton.MouseButton1Click:Connect(function()
+    if timerConnection then timerConnection:Disconnect() end
+    if antiAfkConnection then antiAfkConnection:Disconnect() end
+    gui:Destroy()
+end)
+
+-- Toggle System Function
+local function toggleSystem()
+    isActive = not isActive
+    
+    if isActive then
+        -- Activate system
+        toggleButton.Text = "DEACTIVATE"
+        toggleButton.BackgroundColor3 = Color3.fromRGB(180, 40, 40)
+        statusLabel.Text = "Status: Active"
+        statusLabel.TextColor3 = Color3.fromRGB(100, 255, 100)
+        timerLabel.Visible = true
+        timerLabel.TextColor3 = Color3.fromRGB(200, 255, 200)
+        
+        -- Start timer
+        startTime = os.time()
+        timerConnection = game:GetService("RunService").Heartbeat:Connect(function()
+            local elapsed = os.time() - startTime
+            local hours = math.floor(elapsed / 3600)
+            local minutes = math.floor((elapsed % 3600) / 60)
+            local seconds = elapsed % 60
+            timerLabel.Text = string.format("%02d:%02d:%02d", hours, minutes, seconds)
+        end)
+        
+        -- Start anti-AFK
+        antiAfkConnection = game:GetService("Players").LocalPlayer.Idled:Connect(function()
+            game:GetService("VirtualUser"):CaptureController()
+            game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+            statusLabel.Text = "Status: AFK Prevented!"
+            wait(1)
+            statusLabel.Text = "Status: Active"
+        end)
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "SYSTEM ACTIVATED",
+            Text = "Anti-AFK protection enabled",
+            Duration = 3
+        })
+    else
+        -- Deactivate system
+        toggleButton.Text = "ACTIVATE"
+        toggleButton.BackgroundColor3 = Color3.fromRGB(0, 120, 60)
+        statusLabel.Text = "Status: Non-Active"
+        statusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
+        timerLabel.Visible = false
+        
+        -- Disconnect connections
+        if timerConnection then timerConnection:Disconnect() end
+        if antiAfkConnection then antiAfkConnection:Disconnect() end
+        
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "SYSTEM DEACTIVATED",
+            Text = "Anti-AFK protection disabled",
+            Duration = 3
+        })
+    end
+end
+
+toggleButton.MouseButton1Click:Connect(toggleSystem)
+
+-- Initial notification
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "ADVANCED ANTI-AFK",
+    Text = "Ready to be activated",
+    Duration = 5,
+    Icon = "rbxassetid://4458901886"
