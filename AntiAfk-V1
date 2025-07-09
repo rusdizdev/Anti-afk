@@ -78,11 +78,28 @@ local startTime = os.time()
 local isActive = false
 local timerConnection = nil
 local antiAfkConnection = nil
+local moveSequenceConnection = nil
+
+-- Movement sequence function (forward and backward)
+local function performMovementSequence()
+    local humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+    if humanoid then
+        -- Move forward for 1 second
+        humanoid:Move(Vector3.new(0, 0, -1), true)
+        wait(1)
+        -- Move backward for 1 second
+        humanoid:Move(Vector3.new(0, 0, 1), true)
+        wait(1)
+        -- Stop moving
+        humanoid:Move(Vector3.new(0, 0, 0), true)
+    end
+end
 
 -- Close Functionality
 closeButton.MouseButton1Click:Connect(function()
     if timerConnection then timerConnection:Disconnect() end
     if antiAfkConnection then antiAfkConnection:Disconnect() end
+    if moveSequenceConnection then moveSequenceConnection:Disconnect() end
     gui:Destroy()
 end)
 
@@ -118,6 +135,14 @@ local function toggleSystem()
             statusLabel.Text = "Status: Active"
         end)
         
+        -- Start movement sequence every 5 minutes (300 seconds)
+        moveSequenceConnection = game:GetService("RunService").Heartbeat:Connect(function()
+            local elapsed = os.time() - startTime
+            if elapsed % 300 == 0 then  -- Every 5 minutes
+                performMovementSequence()
+            end
+        end)
+        
         game:GetService("StarterGui"):SetCore("SendNotification", {
             Title = "SYSTEM ACTIVATED",
             Text = "Anti-AFK protection enabled",
@@ -134,6 +159,7 @@ local function toggleSystem()
         -- Disconnect connections
         if timerConnection then timerConnection:Disconnect() end
         if antiAfkConnection then antiAfkConnection:Disconnect() end
+        if moveSequenceConnection then moveSequenceConnection:Disconnect() end
         
         game:GetService("StarterGui"):SetCore("SendNotification", {
             Title = "SYSTEM DEACTIVATED",
