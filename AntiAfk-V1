@@ -78,28 +78,48 @@ local startTime = os.time()
 local isActive = false
 local timerConnection = nil
 local antiAfkConnection = nil
-local moveSequenceConnection = nil
+local jumpTimer = nil
+local lastJumpTime = 0
 
--- Movement sequence function (forward and backward)
-local function performMovementSequence()
-    local humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-    if humanoid then
-        -- Move forward for 1 second
-        humanoid:Move(Vector3.new(0, 0, -1), true)
-        wait(1)
-        -- Move backward for 1 second
-        humanoid:Move(Vector3.new(0, 0, 1), true)
-        wait(1)
-        -- Stop moving
-        humanoid:Move(Vector3.new(0, 0, 0), true)
+-- Jump Functions
+local function performJump()
+    local character = game:GetService("Players").LocalPlayer.Character
+    if character and character:FindFirstChild("Humanoid") then
+        character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
     end
+end
+
+local function performDoubleJump()
+    local character = game:GetService("Players").LocalPlayer.Character
+    if character and character:FindFirstChild("Humanoid") then
+        character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    end
+end
+
+local function startJumpTimer()
+    if jumpTimer then jumpTimer:Disconnect() end
+    
+    jumpTimer = game:GetService("RunService").Heartbeat:Connect(function()
+        local currentTime = os.time()
+        if currentTime - lastJumpTime >= 300 then -- 5 minutes = 300 seconds
+            -- Alternate between jump and double jump
+            if math.random(1, 2) == 1 then
+                performJump()
+            else
+                performDoubleJump()
+            end
+            lastJumpTime = currentTime
+        end
+    end)
 end
 
 -- Close Functionality
 closeButton.MouseButton1Click:Connect(function()
     if timerConnection then timerConnection:Disconnect() end
     if antiAfkConnection then antiAfkConnection:Disconnect() end
-    if moveSequenceConnection then moveSequenceConnection:Disconnect() end
+    if jumpTimer then jumpTimer:Disconnect() end
     gui:Destroy()
 end)
 
@@ -135,13 +155,9 @@ local function toggleSystem()
             statusLabel.Text = "Status: Active"
         end)
         
-        -- Start movement sequence every 5 minutes (300 seconds)
-        moveSequenceConnection = game:GetService("RunService").Heartbeat:Connect(function()
-            local elapsed = os.time() - startTime
-            if elapsed % 300 == 0 then  -- Every 5 minutes
-                performMovementSequence()
-            end
-        end)
+        -- Start jump timer
+        lastJumpTime = os.time()
+        startJumpTimer()
         
         game:GetService("StarterGui"):SetCore("SendNotification", {
             Title = "SYSTEM ACTIVATED",
@@ -159,7 +175,7 @@ local function toggleSystem()
         -- Disconnect connections
         if timerConnection then timerConnection:Disconnect() end
         if antiAfkConnection then antiAfkConnection:Disconnect() end
-        if moveSequenceConnection then moveSequenceConnection:Disconnect() end
+        if jumpTimer then jumpTimer:Disconnect() end
         
         game:GetService("StarterGui"):SetCore("SendNotification", {
             Title = "SYSTEM DEACTIVATED",
